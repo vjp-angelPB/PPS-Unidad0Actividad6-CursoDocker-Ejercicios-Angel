@@ -7,14 +7,16 @@ Comandos para hacer el ejercicio 4:
 
 ## Captura de pantalla de la creación del contenedor y se pueda comprobar que el contenedor está funcionando.
 * `docker run -d --name servidor_web -p 8181:80 nginx`
-![](/uploads/img1.png)
+
+![](/Images/img1.png)
 
 * `docker ps`
-![](/uploads/img2.png)
+
+![](/Images/img2.png)
 
 ## Captura de pantalla del acceso al servidor web a través del navegador web (recuerda acceder a la ip del ordenador donde tenga instalado docker) 
 
-![](/uploads/img3.png)
+![](/Images/img3.png)
 
 
 ## Captura de pantalla de las imágenes de nuestro registro local.
