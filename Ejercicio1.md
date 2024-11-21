@@ -20,13 +20,15 @@ Comandos para hacer el ejercicio 4:
 
 
 ## Captura de pantalla de las imágenes de nuestro registro local.
-`docker images`
+* `docker images`
 
+![](/Images/img4.png)
 
 ## Captura de pantalla donde se elimine el contenedor (debe estar parado el contenedor).
-`docker stop contenedor`
+* `docker stop servidor_web`
+* `docker rm servidor_web`
 
-
+![](/Images/img5.png)
 
 
 
