@@ -6,6 +6,8 @@
 
    * `docker run -d --name web -p 8000:80 php:7.4-apache`
 
+![](/Images/img6.png)
+
 * Colocar en el directorio raíz del servicio web (/var/www/html) de dicho contenedor un fichero llamado index.html con el siguiente contenido:
 
 `<h1>HOLA SOY XXXXXXXXXXXXXXX</h1>`
