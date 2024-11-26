@@ -26,6 +26,7 @@ Hay dos opciones, con docker exec, y docker cp, lo haré con docker exec:
    
    * `echo '<?php echo phpinfo(); ?>' > /var/www/html/index.php`
 
+![](/Images/img7.png)
 
 ## Servidor de base de datos
 
@@ -36,13 +37,16 @@ Hay dos opciones, con docker exec, y docker cp, lo haré con docker exec:
     * Crear una base de datos automáticamente al arrancar que se llame prueba.
     * Crear el usuario invitado con las contraseña invitado.
 
-docker run -d --name bbdd -p 3336:3306 \
-  -e MARIADB_ROOT_PASSWORD=root \
-  -e MARIADB_DATABASE=prueba \
-  -e MARIADB_USER=invitado \
-  -e MARIADB_PASSWORD=invitado \
-  mariadb
+docker run -d \
+--name bbdd \
+-e MYSQL_ROOT_PASSWORD=root \
+-e MYSQL_DATABASE=prueba \
+-e MYSQL_USER=invitado \
+-e MYSQL_PASSWORD=invitado \
+-p 3336:3306 \
+mariadb
 
+![](/Images/img8.png)
 
 Captura de pantalla desde el navegador mostrando el fichero index.html.
 
