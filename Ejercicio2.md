@@ -31,25 +31,25 @@ Deberás sustituir XXXXXXXXXXX por tu nombre y tus apellidos.
 
 Captura de pantalla desde el navegador mostrando el fichero index.html.
 
-
+![](/Images/img.png)
 
 
 Captura de pantalla desde el navegador mostrando el fichero index.php.
 
-
+![](/Images/img.png)
 
 Captura de pantalla donde se vea el tamaño del contenedor web después de crear los dos ficheros.
 
-
+![](/Images/img.png)
 
 
 Captura de pantalla donde desde un cliente de base de datos (instalado en tu ordenador) se pueda observar que hemos podido conectarnos al servidor de base de datos con el usuario creado y que se ha creado la base de datos prueba (show databases). 
 El acceso se debe realizar desde el ordenador que tenéis instalado docker, no hay que acceder desde dentro del contenedor, es decir, no usar docker exec.
    
-
+![](/Images/img.png)
 
     
 Captura de pantalla donde se comprueba que no se puede borrar la imagen mariadb mientras el contenedor bbdd está creado.
 
-
+![](/Images/img.png)
 
