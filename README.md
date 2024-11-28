@@ -1,11 +1,13 @@
 # PPS-Unidad0Actividad6-CursoDocker-Ejercicios-Angel
 
+![](Images/imgprincipal.png)
+
 Este conjunto de ejercicios, correspondientes a la Unidad 0, Actividad 6 del curso de Docker, tienen como objetivo proporcionar una comprensión práctica de los conceptos fundamentales de Docker, centrados en la creación y gestión de contenedores, imágenes, almacenamiento, redes y escenarios multicontenedor.
 
-Además de los ejercicios, se incluyen anotaciones con comandos, capturas de pantalla y explicaciones adicionales que facilitan la comprensión de los temas tratados.
+Además de los ejercicios, se incluyen anotaciones con comandos, capturas de pantalla y explicaciones adicionales que 
+facilitan la comprensión de los temas tratados.
 
 # Ejercicios para entregar
-
 
 ## ![Sesión 1](Sesion1.md)
 La sesión 1 está asociada con la Introducción a Docker.
