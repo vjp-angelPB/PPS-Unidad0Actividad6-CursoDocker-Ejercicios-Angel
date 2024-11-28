@@ -1,4 +1,4 @@
-# Ejercicio 2 
+# Sesión 2 
 
 ## Servidor web
 
