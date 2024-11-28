@@ -95,10 +95,13 @@ Nos conectamos con el siguiente comando:
 
 * `mariadb -h 127.0.0.1 -P 3336 -u invitado -pinvitado`
 
-    
+![](/Images/img14.png)
+
+Nos salimos, comprobamos que el contenedor sigue creado e intentamos borrarlo.
+  
 Captura de pantalla donde se comprueba que no se puede borrar la imagen mariadb mientras el contenedor bbdd está creado.
 
 * `docker rmi mariadb`
 
-![](/Images/img.png)
+![](/Images/img15.png)
 
