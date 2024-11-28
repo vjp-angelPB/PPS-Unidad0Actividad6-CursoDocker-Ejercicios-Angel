@@ -1,4 +1,4 @@
-p# PPS-Unidad0Actividad6-CursoDocker-Ejercicios-Angel
+# PPS-Unidad0Actividad6-CursoDocker-Ejercicios-Angel
 
 <div align="center">
   <img src="Images/imgprincipal.png" alt="Imagen Presentación Docker" />
