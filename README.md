@@ -3,8 +3,8 @@
 # Ejercicios para entregar
 
 
-## ![Ejercicio 1](Ejercicio1.md)
-El ejercicio 1 está asociado con la introducción de Docker.
+## ![Sesión 1](Sesión1.md)
+La sesión 1 está asociada con la Introducción a Docker.
 
-## ![Ejercicio 2](Ejercicio2.md)
-El ejercicio 2 está asociado con Imágenes.
+## ![Sesión 2](Sesión2.md)
+La sesión 2 está asociada con el apartado de Imágenes, concretamente los ejercicios para entregar que incluyen un Servidor web y un Servidor de base de datos.
