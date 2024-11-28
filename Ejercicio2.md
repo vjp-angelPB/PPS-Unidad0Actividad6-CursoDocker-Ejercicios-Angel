@@ -70,7 +70,12 @@ Captura de pantalla donde se vea el tamaño del contenedor web después de crear
 
 Creación de dos ficheros:
 
+* `docker exec -it web bash`
+  * `echo '<h1>Sobre mí</h1><p>Hola, soy [TU NOMBRE Y APELLIDOS]. Bienvenidos a mi página web.</p>' > /var/www            /html/angel.html`
+  * `echo '<?php echo "<h1>Contacto</h1><p>Puedes contactarme a mi correo: ejemplo@correo.com</p>"; ?>' > /var/www        /html/contacto.php`
+    
 ![](/Images/img12.png)
+
 
 ![](/Images/img13.png)
 
