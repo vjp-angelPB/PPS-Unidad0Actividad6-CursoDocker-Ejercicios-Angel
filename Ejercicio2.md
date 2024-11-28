@@ -52,14 +52,14 @@ Captura de pantalla desde el navegador mostrando el fichero index.html.
 
 http://localhost:8000/index.html
 
-![](/Images/img.png)
+![](/Images/img9.png)
 
 
 Captura de pantalla desde el navegador mostrando el fichero index.php.
 
 http://localhost:8000/index.php
 
-![](/Images/img.png)
+![](/Images/img10.png)
 
 
 Captura de pantalla donde se vea el tamaño del contenedor web después de crear los dos ficheros.
