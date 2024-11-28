@@ -66,7 +66,13 @@ Captura de pantalla donde se vea el tamaño del contenedor web después de crear
 
 `docker ps --size`
 
-![](/Images/img.png)
+![](/Images/img11.png)
+
+Creación de dos ficheros:
+
+![](/Images/img12.png)
+
+![](/Images/img13.png)
 
 
 Captura de pantalla donde desde un cliente de base de datos (instalado en tu ordenador) se pueda observar que hemos podido conectarnos al servidor de base de datos con el usuario creado y que se ha creado la base de datos prueba (show databases). 
