@@ -3,7 +3,8 @@
 <div align="center">
   <img src="Images/imgprincipal.png" alt="Imagen Presentación Docker" />
 </div>
-----
+
+____
 
 Este conjunto de ejercicios, correspondientes a la Unidad 0, Actividad 6 del curso de Docker, tienen como objetivo proporcionar una comprensión práctica de los conceptos fundamentales de Docker, centrados en la creación y gestión de contenedores, imágenes, almacenamiento, redes y escenarios multicontenedor.
 
