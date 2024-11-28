@@ -84,14 +84,21 @@ Volvemos a realizar el comando para comprobar el tamaño del contenedor tras hab
 
 Captura de pantalla donde desde un cliente de base de datos (instalado en tu ordenador) se pueda observar que hemos podido conectarnos al servidor de base de datos con el usuario creado y que se ha creado la base de datos prueba (show databases). 
 El acceso se debe realizar desde el ordenador que tenéis instalado docker, no hay que acceder desde dentro del contenedor, es decir, no usar docker exec.
-   
-![](/Images/img.png)
 
 Instala un cliente de base de datos como DBeaver, MySQL Workbench, o usa el cliente de MariaDB desde la terminal.
+
+Lo haré con el cliente de MariaDB desde la termina, para instalarlo ejecutamos el comando:
+
+* `sudo apt install mariadb-client`
+
+Nos conectamos con el siguiente comando:
+
+* `mariadb -h 127.0.0.1 -P 3336 -u invitado -pinvitado`
+
     
 Captura de pantalla donde se comprueba que no se puede borrar la imagen mariadb mientras el contenedor bbdd está creado.
 
-`docker rmi mariadb`
+* `docker rmi mariadb`
 
 ![](/Images/img.png)
 
