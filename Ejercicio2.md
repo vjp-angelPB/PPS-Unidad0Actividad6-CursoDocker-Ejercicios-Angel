@@ -76,6 +76,8 @@ Creación de dos ficheros:
     
 ![](/Images/img12.png)
 
+Volvemos a realizar el comando para comprobar el tamaño del contenedor tras haber creado dos ficheros:
+`docker ps --size`
 
 ![](/Images/img13.png)
 
