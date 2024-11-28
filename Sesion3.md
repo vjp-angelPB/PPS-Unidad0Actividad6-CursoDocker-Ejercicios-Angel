@@ -1,44 +1,42 @@
-# Sesión 3 - Redes
+# Sesión 3 - Almacenamiento
 
 Ejercicios para entregar
 
 Entrega uno de estos dos ejercicios (si estás muy aburrido puedes entregar los dos):
-Trabajar con redes docker
+Creación y uso de volúmenes
 
-    Vamos a crear dos redes de ese tipo (BRIDGE) con los siguientes datos:
-
-    Red1
-        Nombre: red1
-        Dirección de red: 172.28.0.0
-        Máscara de red: 255.255.0.0
-        Gateway: 172.28.0.1
-
-    Red2
-        Nombre: red2
-        Es resto de los datos será proporcionados automáticamente por Docker.
-    Poner en ejecución un contenedor de la imagen ubuntu:20.04 que tenga como hostname host1, como IP 172.28.0.10 y que esté conectado a la red1. Lo llamaremos u1.
-    Entrar en ese contenedor e instalar la aplicación ping (apt update && apt install inetutils-ping).
-    Poner en ejecución un contenedor de la imagen ubuntu:20.04 que tenga como hostname host2 y que esté conectado a la red2. En este caso será docker el que le de una IP correspondiente a esa red. Lo llamaremos u2.
-    Entrar en ese contenedor e instalar la aplicación ping (apt update && apt install inetutils-ping).
+    Crear los siguientes volúmenes con la orden docker volume: volumen_datos y volumen_web.
+    Una vez creados estos contenedores:
+        Arrancar un contenedor llamado c1 sobre la imagen php:7.4-apache que monte el volumen_web en la ruta /var/www/html y que sea accesible en el puerto 8080.
+        Arrancar un contenedor llamado c2 sobre la imagen mariadb que monte el volumen_datos en la ruta /var/lib/mysql y cuya contraseña de root sea admin.
+    Intenta borrar el volumen volumen_datos, para ello tendrás que parar y borrar el contenedor c2 y tras ello borrar el volumen.
+    Copia o crea un fichero index.html al contenedor c1, accede al contenedor y comprueba que se está visualizando.
+    Borra el contenedor c1 y crea un contenedor c3 con las mismas características que c1 pero sirviendo en el puerto 8081.
 
 Deberás entregar los siguientes pantallazos comprimidos en un zip o en un documento pdf:
 
-    Pantallazo donde se vea la configuración de red del contenedor u1.
-    Pantallazo donde se vea la configuración de red del contenedor u2.
-    Pantallazo donde desde cualquiera de los dos contenedores se pueda ver que no podemos hacer ping al otro ni por ip ni por nombre.
-    Pantallazo donde se pueda comprobar que si conectamos el contenedor u1 a la red2 (con docker network connect), desde el contenedor u1, tenemos acceso al contenedor u2 mediante ping, tanto por nombre como por ip.
+    Pantallazo donde se puedan ver los dos volúmenes creados.
+    Pantallazo con la orden correspondiente para arrancar el contenedor c1 usando el volumen_web.
+    Pantallazo con la orden correspondiente para arrancar el contenedor c2 usando el volumen_datos.
+    Pantallazo donde se vea el proceso para poder borrar el volumen_datos.
+    Pantallazo donde se vea el borrado de c1 y la creación de c3.
+    Pantallazo donde se vea el acceso al contenedor c3.
 
-Despliegue de Nextcloud + mariadb/postgreSQL
+Bind mount para compartir datos
 
-Vamos a desplegar la aplicación nextcloud con una base de datos (puedes elegir mariadb o PostgreSQL) (NOTA: Para que no te de errores utiiliza la imagen mariadb:10.5). Te puede servir el ejercicio que hemos realizado para desplegar Wordpress. Para ello sigue los siguientes pasos:
+    Crea una carpeta llamada saludo y dentro de ella crea un fichero llamado index.html con el siguiente contenido (Deberás sustituir ese XXXXXx por tu nombre.):
 
-    Crea una red de tipo bridge.
-    Crea el contenedor de la base de datos conectado a la red que has creado. La base de datos se debe configurar para crear una base de dato y un usuario. Además el contenedor debe utilizar almacenamiento (volúmenes o bind mount) para guardar la información. Puedes seguir la documentación de mariadb o la de PostgreSQL.
-    A continuación, siguiendo la documentación de la imagen nextcloud, crea un contenedor conectado a la misma red, e indica las variables adecuadas para que se configure de forma adecuada y realice la conexión a la base de datos. El contenedor también debe ser persistente usando almacenamiento.
-    Accede a la aplicación usando un navegador web.
+     <h1>HOLA SOY XXXXXX</h1>
+
+    Una vez hecho esto arrancar dos contenedores basados en la imagen php:7.4-apache que hagan un bind mount de la carpeta saludo en la carpeta /var/www/html del contenedor. Uno de ellos vamos a acceder con el puerto 8181 y el otro con el 8282. Y su nombres serán c1 y c2.
+    Modifica el contenido del fichero ~/saludo/index.html.
+    Comprueba que puedes seguir accediendo a los contenedores, sin necesidad de reiniciarlos.
 
 Deberás entregar los siguientes pantallazos comprimidos en un zip o en un documento pdf:
 
-    Pantallazo con la instrucción para crear el contenedor de la base de datos.
-    Pantallazo con la instrucción para crear el contenedor de la aplicación.
-    Pantallazo donde se ve el acceso a la aplicación desde un navegador web.
+    Pantallazo con la orden correspondiente para arrancar el contenedor c1 (puerto 8181) realizando el bind mount solicitado.
+    Pantallazo con la orden correspondiente para arrancar el contenedor c2 (puerto 8282) realizando el bind mount solicitado.
+    Pantallazo donde se pueda apreciar que accediendo a c1 se puede ver el contenido de index.html.
+    Pantallazo donde se pueda apreciar que accediendo a c2 se puede ver el contenido de index.html.
+    Otro dos pantallazos (o uno) donde se vea accediendo a los contenedores después de modificar el fichero index.html.
+
