@@ -1,4 +1,4 @@
-# Sesión 2 
+# Sesión 2 - Imágenes
 
 ## Servidor web
 
