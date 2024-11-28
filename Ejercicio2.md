@@ -98,6 +98,8 @@ Nos conectamos con el siguiente comando:
 ![](/Images/img14.png)
 
 Nos salimos, comprobamos que el contenedor sigue creado e intentamos borrarlo.
+
+* `docker ps`
   
 Captura de pantalla donde se comprueba que no se puede borrar la imagen mariadb mientras el contenedor bbdd está creado.
 
