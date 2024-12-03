@@ -4,13 +4,14 @@
   <img src="Images/imgprincipal.png" alt="Imagen Presentación Docker" />
 </div>
 
-[Curso](https://iesgn.github.io/curso_docker_2021)
 ____
 
 Este conjunto de ejercicios, correspondientes a la Unidad 0, Actividad 6 del curso de Docker, tienen como objetivo proporcionar una comprensión práctica de los conceptos fundamentales de Docker, centrados en la creación y gestión de contenedores, imágenes, almacenamiento, redes y escenarios multicontenedor.
 
 Además de los ejercicios, se incluyen anotaciones con comandos, capturas de pantalla y explicaciones adicionales que 
 facilitan la comprensión de los temas tratados.
+
+[Curso](https://iesgn.github.io/curso_docker_2021)
 
 # Ejercicios para entregar
 
