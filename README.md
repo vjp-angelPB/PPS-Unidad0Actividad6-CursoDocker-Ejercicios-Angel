@@ -25,7 +25,7 @@ La sesión 2 está asociada con el apartado de Imágenes, concretamente incluye 
 La sesión 3 está asociada con el apartado de Almacenamiento, concretamente los ejercicios para entregar que incluyen Creación y uso de volúmenes y Bind mount para compartir datos.
 
 ## ![Sesión 4](Sesion4.md)
-La sesión 4 está asociada con el apartado de Redes.
+La sesión 4 está asociada con el apartado de Redes, concretamente se centra en los tipos de redes como bridge, host y none, aunque se centra más en el uso de una red bridge definida por el usuario.
 
 ## ![Sesión 5](Sesion5.md)
 La sesión 5 está asociada con el apartado de Escenarios multicontenedor.
