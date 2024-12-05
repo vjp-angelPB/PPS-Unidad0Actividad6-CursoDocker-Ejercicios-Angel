@@ -8,7 +8,7 @@ Crear los siguientes volúmenes con la orden docker volume: volumen_datos y volu
 
 `docker volume create volumen_web`
 
-![](/Images/img.png)
+![](/Images/img16.png)
 
 Una vez creados estos contenedores:
 
