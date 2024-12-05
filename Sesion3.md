@@ -55,14 +55,15 @@ Borra el contenedor c1 y crea un contenedor c3 con las mismas características q
 
 ![](/Images/img.png)
 
-Deberás entregar los siguientes pantallazos comprimidos en un zip o en un documento pdf:
 
 Captura de pantalla donde se puedan ver los dos volúmenes creados.
+
 `docker volume ls`
 
 ![](/Images/img.png)
 
 Captura de pantalla con la orden correspondiente para arrancar el contenedor c1 usando el volumen_web.
+
 `docker run -d --name c1 -v volumen_web:/var/www/html -p 8080:80 php:7.4-apache`
 
 `docker ps`
@@ -70,6 +71,7 @@ Captura de pantalla con la orden correspondiente para arrancar el contenedor c1 
 ![](/Images/img.png)
 
 Captura de pantalla con la orden correspondiente para arrancar el contenedor c2 usando el volumen_datos.
+
 `docker run -d --name c2 -v volumen_datos:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=admin mariadb`
 
 `docker ps`
@@ -77,6 +79,7 @@ Captura de pantalla con la orden correspondiente para arrancar el contenedor c2 
 ![](/Images/img.png)
 
 Captura de pantalla donde se vea el proceso para poder borrar el volumen_datos.
+
 `docker stop c2`
 
 `docker rm c2`
@@ -88,6 +91,7 @@ Captura de pantalla donde se vea el proceso para poder borrar el volumen_datos.
 ![](/Images/img.png)
 
 Captura de pantalla donde se vea el borrado de c1 y la creación de c3.
+
 `docker stop c1`
 
 `docker rm c1`
@@ -99,6 +103,7 @@ Captura de pantalla donde se vea el borrado de c1 y la creación de c3.
 ![](/Images/img.png)
 
 Captura de pantalla donde se vea el acceso al contenedor c3.
+
 `http://localhost:8081`
 
 ![](/Images/img.png)
