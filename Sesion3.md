@@ -16,13 +16,13 @@ Una vez creados estos contenedores:
 
 `docker run -d --name c1 -v volumen_web:/var/www/html -p 8080:80 php:7.4-apache`
 
-![](/Images/img.png)
+![](/Images/img17.png)
 
 - Arrancar un contenedor llamado c2 sobre la imagen mariadb que monte el volumen_datos en la ruta /var/lib/mysql y cuya contraseña de root sea admin.
 
 `docker run -d --name c2 -v volumen_datos:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=admin mariadb`
 
-![](/Images/img.png)
+![](/Images/img18.png)
 
 
 Intenta borrar el volumen volumen_datos, para ello tendrás que parar y borrar el contenedor c2 y tras ello borrar el volumen.
@@ -33,7 +33,7 @@ Intenta borrar el volumen volumen_datos, para ello tendrás que parar y borrar e
 
 `docker volume rm volumen_datos`
 
-![](/Images/img.png)
+![](/Images/img19.png)
 
 Copia o crea un fichero index.html al contenedor c1, accede al contenedor y comprueba que se está visualizando.
 
@@ -43,7 +43,7 @@ Copia o crea un fichero index.html al contenedor c1, accede al contenedor y comp
 
 `curl http://localhost:8080`
 
-![](/Images/img.png)
+![](/Images/img20.png)
 
 Borra el contenedor c1 y crea un contenedor c3 con las mismas características que c1 pero sirviendo en el puerto 8081.
 
@@ -53,14 +53,14 @@ Borra el contenedor c1 y crea un contenedor c3 con las mismas características q
 
 `docker run -d --name c3 -v volumen_web:/var/www/html -p 8081:80 php:7.4-apache`
 
-![](/Images/img.png)
+![](/Images/img22.png)
 
 
 Captura de pantalla donde se puedan ver los dos volúmenes creados.
 
 `docker volume ls`
 
-![](/Images/img.png)
+![](/Images/img23.png)
 
 Captura de pantalla con la orden correspondiente para arrancar el contenedor c1 usando el volumen_web.
 
@@ -68,7 +68,7 @@ Captura de pantalla con la orden correspondiente para arrancar el contenedor c1 
 
 `docker ps`
 
-![](/Images/img.png)
+![](/Images/img24.png)
 
 Captura de pantalla con la orden correspondiente para arrancar el contenedor c2 usando el volumen_datos.
 
@@ -76,7 +76,7 @@ Captura de pantalla con la orden correspondiente para arrancar el contenedor c2 
 
 `docker ps`
 
-![](/Images/img.png)
+![](/Images/img25.png)
 
 Captura de pantalla donde se vea el proceso para poder borrar el volumen_datos.
 
@@ -88,7 +88,7 @@ Captura de pantalla donde se vea el proceso para poder borrar el volumen_datos.
 
 `docker volume ls`
 
-![](/Images/img.png)
+![](/Images/img26.png)
 
 Captura de pantalla donde se vea el borrado de c1 y la creación de c3.
 
@@ -100,13 +100,13 @@ Captura de pantalla donde se vea el borrado de c1 y la creación de c3.
 
 `docker ps`
 
-![](/Images/img.png)
+![](/Images/img27.png)
 
 Captura de pantalla donde se vea el acceso al contenedor c3.
 
 `http://localhost:8081`
 
-![](/Images/img.png)
+![](/Images/img28.png)
 
 
 ## Bind mount para compartir datos
@@ -119,7 +119,7 @@ Crea una carpeta llamada saludo y dentro de ella crea un fichero llamado index.h
 
 `echo "<h1>HOLA SOY Angel</h1>" > saludo/index.html`
 
-![](/Images/img.png)
+![](/Images/img29.png)
 
 Una vez hecho esto arrancar dos contenedores basados en la imagen php:7.4-apache que hagan un bind mount de la carpeta saludo en la carpeta /var/www/html del contenedor. Uno de ellos vamos a acceder con el puerto 8181 y el otro con el 8282. Y su nombres serán c1 y c2.
 
@@ -127,23 +127,30 @@ Una vez hecho esto arrancar dos contenedores basados en la imagen php:7.4-apache
 
 `docker run -d --name c2 -v $(pwd)/saludo:/var/www/html -p 8282:80 php:7.4-apache`
 
+![](/Images/img30.png)
+
 `http://localhost:8181`
+
+![](/Images/img31.png)
 
 `http://localhost:8282`
 
-![](/Images/img.png)
+![](/Images/img32.png)
+
 
 Modifica el contenido del fichero ~/saludo/index.html.
 
 `echo "<h1>MODIFICADO POR XXXXX</h1>" > saludo/index.html`
 
-![](/Images/img.png)
+![](/Images/img33.png)
 
 Comprueba que puedes seguir accediendo a los contenedores, sin necesidad de reiniciarlos.
 
 `http://localhost:8181`
 
+![](/Images/img34.png)
+
 `http://localhost:8282`
 
-![](/Images/img.png)
+![](/Images/img35.png)
 
