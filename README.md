@@ -22,10 +22,10 @@ La sesión 1 está asociada con la Introducción a Docker.
 La sesión 2 está asociada con el apartado de Imágenes, concretamente incluye un Servidor web y un Servidor de base de datos.
 
 ## ![Sesión 3](Sesion3.md)
-La sesión 3 está asociada con el apartado de Almacenamiento, concretamente los ejercicios para entregar que incluyen Creación y uso de volúmenes y Bind mount para compartir datos.
+La sesión 3 está asociada con el apartado de Almacenamiento, concretamente incluye la creación y uso de volúmenes y Bind mount para compartir datos.
 
 ## ![Sesión 4](Sesion4.md)
-La sesión 4 está asociada con el apartado de Redes, concretamente se centra en los tipos de redes como bridge, host y none, aunque se centra más en el uso de una red bridge definida por el usuario.
+La sesión 4 está asociada con el apartado de Redes, concretamente se centra en los diversos tipos de redes, aunque se centra más en la creación y uso de una red bridge definida por el usuario.
 
 ## ![Sesión 5](Sesion5.md)
 La sesión 5 está asociada con el apartado de Escenarios multicontenedor.
