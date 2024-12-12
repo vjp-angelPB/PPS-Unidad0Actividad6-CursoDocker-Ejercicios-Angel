@@ -18,7 +18,7 @@ Red1
   --gateway 172.28.0.1 \
   red1`
 
-![](/Images/img.png)
+![](/Images/img36.png)
 
 Red2
     * Nombre: red2    
@@ -26,7 +26,7 @@ Red2
 
 `docker network create --driver bridge red2`
 
-![](/Images/img.png)
+![](/Images/img37.png)
 
 Poner en ejecución un contenedor de la imagen ubuntu:20.04 que tenga como hostname host1, como IP 172.28.0.10 y que esté conectado a la red1. Lo llamaremos u1.
 
