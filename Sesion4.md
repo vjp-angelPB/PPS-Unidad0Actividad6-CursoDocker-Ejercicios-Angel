@@ -18,7 +18,7 @@ Red1
   --gateway 172.28.0.1 \
   red1`
 
-![](/Images/img36.png)
+![](/Images/img39.png)
 
 Red2
     * Nombre: red2    
