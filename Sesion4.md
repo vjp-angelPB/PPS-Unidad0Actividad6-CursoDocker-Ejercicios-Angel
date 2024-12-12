@@ -12,10 +12,10 @@ Red1
     * Máscara de red: 255.255.0.0
     * Gateway: 172.28.0.1
 
-`docker network create \
-  --driver bridge \
-  --subnet 172.28.0.0/16 \
-  --gateway 172.28.0.1 \
+`docker network create 
+  --driver bridge 
+  --subnet 172.28.0.0/16 
+  --gateway 172.28.0.1 
   red1`
 
 ![](/Images/img39.png)
@@ -32,11 +32,12 @@ Poner en ejecución un contenedor de la imagen ubuntu:20.04 que tenga como hostn
 
 `docker run -dit --name u1 --hostname host1 --network red1 --ip 172.28.0.10 ubuntu:20.04`
 
-![](/Images/img.png)
+![](/Images/img8.png)
 
 Entrar en ese contenedor e instalar la aplicación ping (apt update && apt install inetutils-ping).
 
 `docker exec -it u1 bash`
+
 `apt update && apt install -y inetutils-ping`
 
 ![](/Images/img.png)
