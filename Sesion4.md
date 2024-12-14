@@ -12,11 +12,7 @@ Red1
     * Máscara de red: 255.255.0.0
     * Gateway: 172.28.0.1
 
-`docker network create 
-  --driver bridge 
-  --subnet 172.28.0.0/16 
-  --gateway 172.28.0.1 
-  red1`
+`docker network create --driver bridge --subnet 172.28.0.0/16 --gateway 172.28.0.1 red1`
 
 ![](/Images/img39.png)
 
