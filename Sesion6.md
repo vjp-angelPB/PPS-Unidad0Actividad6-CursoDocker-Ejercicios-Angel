@@ -6,11 +6,37 @@ Para la realización de estos ejercicios es necesario tener una cuenta en Docker
 
 Arranca un contenedor desde una imagen base debian o ubuntu.
 
+`docker run -it debian bash`
+
+![](/Images/img.png)
+
 Instala los paquetes inetutils-ping, iproute2 y dnsutils con distintas herramientas de redes.
+
+`apt update`
+
+![](/Images/img.png)
+
+`apt install -y inetutils-ping iproute2 dnsutils`
+
+![](/Images/img.png)
 
 Crea una imagen a partir de este contenedor (recuerda que tienes que utilizar el nombre de tu usuario Docker Hub). La imagen se debe llamar <tu_usuario_docker_hub>/comandos_redes.
 
+`docker commit <container_id> <tu_usuario_docker_hub>/comandos_redes`
+
+![](/Images/img.png)
+
 Sube la imagen a Docker Hub.
+
+`docker login`
+
+![](/Images/img.png)
+
+`docker push <tu_usuario_docker_hub>/comandos_redes`
+
+![](/Images/img.png)
+
+
 
 Descarga la imagen en otro ordenador donde tengas docker instalado, y crea un contenedor a partir de ella. (Si no tienes otro ordenador con docker instalado, borra la imagen en tu ordenador y bájala de Docker Hub).
 
@@ -24,6 +50,23 @@ Pantalalzo donde se vea la bajada de la imagen y la creación de un nuevo conten
 
 ## Creación de una imagen a partir de un Dockerfile
 Crea una página web estática (por ejemplo busca una plantilla HTML5). O simplemente crea un index.html.
+
+# Mi Página Web
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+</head>
+<body>
+    <h1>Bienvenido a mi página web estática</h1>
+    <p>Esta es una página simple servida por un contenedor Docker.</p>
+</body>
+</html>
+```
 
 Crea un fichero Dockerfile que permita crear una imagen con un servidor web sirviendo la página. Puedes usar una imagen base debian o ubuntu, o una imagen que tenga ya un servicio web, como hemos visto en el apartado Ejemplo 1: Construcción de imágenes con una página estática.
 
