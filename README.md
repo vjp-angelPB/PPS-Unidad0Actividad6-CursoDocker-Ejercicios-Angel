@@ -29,3 +29,6 @@ La sesión 4 está asociada con el apartado de Redes, concretamente se centra en
 
 ## ![Sesión 5](Sesion5.md)
 La sesión 5 está asociada con el apartado de Escenarios multicontenedor.
+
+## ![Sesión 6](Sesion6.md)
+La sesión 6 está asociada con el apartado de 
