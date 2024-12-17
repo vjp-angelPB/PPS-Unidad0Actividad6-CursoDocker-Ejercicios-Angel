@@ -9,21 +9,21 @@ Para obtener la imagen Docker de Bitnami PrestaShop lo haremos a través del sig
 
 `sudo apt-get install docker-compose`
 
-![](/Images/img.png)
+![](/Images/img56.png)
 
+`mkdir prestashop`
 
 `docker pull bitnami/prestashop:latest`
 
-![](/Images/img.png)
+![](/Images/img57.png)
 
 `docker network create prestashop-network`
 
-![](/Images/img.png)
+![](/Images/img58.png)
 
-`curl -sSL https://raw.githubusercontent.com/bitnami/containers/main/bitnami/prestashop/docker-compose.yml > docker-compose.yml
-docker-compose up -d`
+`curl -sSL https://raw.githubusercontent.com/bitnami/containers/main/bitnami/prestashop/docker-compose.yml > docker-compose.yml`
 
-![](/Images/img.png)
+![](/Images/img59.png)
 
 Una vez hemos descargado el fichero docker-compose.yml asociado deberemos modificarlo de la siguiente manera:
 
@@ -36,55 +36,63 @@ Modificar los valores de las variables de entorno para conseguir lo siguiente:
 * Ten en cuenta que si tienes instalado docker en una máquina virtual y tienes que poner la IP de la máquina para acceder a los contenedores, debes modificar la variable de entorno PRESTASHOP_HOST para poner esa dirección ip.
   
 * Por último, si tienes que repetir el ejercicio, borra el escenario con docker-compose down -v, para eliminar los volúmenes y que la modificación de la configuración se tenga en cuenta.
+# Copyright VMware, Inc.
+# SPDX-License-Identifier: APACHE-2.0
 
 version: '2'
 services:
+  mariadb:
+    image: docker.io/bitnami/mariadb:11.2
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MARIADB_USER=pepe
+      - MARIADB_PASSWORD=pepe
+      - MARIADB_DATABASE=mitienda
+    volumes:
+      - 'mariadb_data:/bitnami/mariadb'
   prestashop:
-    image: bitnami/prestashop:latest
+    image: docker.io/bitnami/prestashop:8
     ports:
-      - "8080:8080"
+      - '80:8080'
+      - '443:8443'
     environment:
-      - PS_DEV_MODE=true
-      - PRESTASHOP_HOST=192.168.x.x  # IP de tu máquina
-      - PRESTASHOP_DB_HOST=mysql
-      - PRESTASHOP_DB_NAME=mitienda
-      - PRESTASHOP_DB_USER=pepe
-      - PRESTASHOP_DB_PASSWORD=pepe
+      - PRESTASHOP_HOST=192.168.1.144
+      - PRESTASHOP_DATABASE_HOST=mariadb
+      - PRESTASHOP_DATABASE_PORT_NUMBER=3306
+      - PRESTASHOP_DATABASE_USER=pepe
+      - PRESTASHOP_DATABASE_PASSWORD=pepe
+      - PRESTASHOP_DATABASE_NAME=mitienda
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
     volumes:
-      - prestashop_data:/bitnami/prestashop
+      - 'prestashop_data:/bitnami/prestashop'
     depends_on:
-      - mysql
-
-  mysql:
-    image: bitnami/mysql:latest
-    environment:
-      - MYSQL_ROOT_PASSWORD=somepassword
-      - MYSQL_USER=pepe
-      - MYSQL_PASSWORD=pepe
-      - MYSQL_DATABASE=mitienda
-    volumes:
-      - mysql_data:/bitnami/mysql
-
+      - mariadb
 volumes:
+  mariadb_data:
+    driver: local
   prestashop_data:
-  mysql_data:
+    driver: local
 
+
+![](/Images/img65.png)
 
 Levantar los contenedores:
 
 `docker-compose up -d`
 
-![](/Images/img.png)
-
 `docker-compose ps`
 
-![](/Images/img.png)
+![](/Images/img62.png)
 
 Acceso desde el navegador a la aplicación.
 
-`http://<tu_ip>:8080`
+`http://10.0.4.56:80`
 
-![](/Images/img.png)
+Aparece un error que no puede conectarse a la base de datos:
+
+![](/Images/img66.png)
 
 
 ## Despliegue de Nextcloud
@@ -97,7 +105,7 @@ Vamos a desplegar la aplicación nextcloud con una base de datos (puedes elegir 
   
   `sudo apt-get install docker-compose`
 
-![](/Images/img.png)
+![](/Images/img67.png)
 
   
 * Dentro de un directorio crea un fichero docker-compose.yml para realizar el despliegue de nextcloud con una base de datos. Recuerda las variables de entorno y la persistencia de información.
@@ -133,25 +141,25 @@ volumes:
   nextcloud_data:
   db_data:
 
-![](/Images/img.png)
+![](/Images/img68.png)
 
 * Levanta el escenario con docker-compose.
 
 `docker-compose up -d`
 
-![](/Images/img.png)
+![](/Images/img69.png)
 
 * Muestra los contenedores con docker-compose.
 
 `docker-compose ps`
 
-![](/Images/img.png)
+![](/Images/img70.png)
 
 * Accede a la aplicación y comprueba que funciona.
 
 `http://<tu_ip>:8081`
 
-![](/Images/img.png)
+![](/Images/img71.png)
 
 * Comprueba el almacenamiento que has definido y que se ha creado una nueva red de tipo bridge.
 
@@ -159,12 +167,12 @@ volumes:
 
 `docker volume ls`
 
-![](/Images/img.png)
+![](/Images/img72.png)
 
 
 * Borra el escenario con docker-compose.
 
 `docker-compose down -v`
 
-![](/Images/img.png)
+![](/Images/img73.png)
 
