@@ -1,5 +1,5 @@
 # Sesión 5 - Escenarios multicontenedor
-
+e entregar tanto el enlace de tu repositorio en githu
 ## Despliegue de prestashop
 
 Es esta tarea vamos a desplegar una tienda virtual construída con prestashop. Utilizaremos el fichero docker-compose.yml de Bitnami que podemos encontrar en la siguiente [URL](https://hub.docker.com/r/bitnami/prestashop).
@@ -176,3 +176,4 @@ volumes:
 
 ![](/Images/img73.png)
 
+> Ángel Pérez Blanco
