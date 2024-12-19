@@ -32,3 +32,5 @@ La sesión 5 está asociada con el apartado de Escenarios multicontenedor.
 
 ## ![Sesión 6](Sesion6.md)
 La sesión 6 está asociada con el apartado de 
+
+> Ángel Pérez Blanco
