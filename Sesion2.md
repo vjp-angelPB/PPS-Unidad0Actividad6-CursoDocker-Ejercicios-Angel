@@ -107,3 +107,5 @@ Captura de pantalla donde se comprueba que no se puede borrar la imagen mariadb 
 
 ![](/Images/img15.png)
 
+
+> Ángel Pérez Blanco
