@@ -42,6 +42,9 @@ Descarga la imagen en otro ordenador donde tengas docker instalado, y crea un co
 
 `docker pull aperezb33/comandos_redes`
 
+![](/Images/img78.png)
+
+
 ## Creación de una imagen a partir de un Dockerfile
 Crea una página web estática (por ejemplo busca una plantilla HTML5). O simplemente crea un index.html.
 
@@ -62,6 +65,8 @@ Crea una página web estática (por ejemplo busca una plantilla HTML5). O simple
 </html>
 ```
 
+![](/Images/img78.png)
+
 Crea un fichero Dockerfile que permita crear una imagen con un servidor web sirviendo la página. Puedes usar una imagen base debian o ubuntu, o una imagen que tenga ya un servicio web, como hemos visto en el apartado Ejemplo 1: Construcción de imágenes con una página estática.
 
 # Usa la imagen base de nginx
@@ -73,10 +78,14 @@ COPY index.html /usr/share/nginx/html/
 # Exponer el puerto 80 para acceder a la página web
 EXPOSE 80
 
+![](/Images/img78.png)
+
 
 Ejecuta el comando docker que crea la nueva imagen. La imagen se debe llamar <tu_usuario_docker_hub>/mi_servidor_web.
 
 `docker build -t <tu_usuario_docker_hub>/comandos_redes .`
+
+![](/Images/img78.png)
 
 
 Conéctate a Docker Hub y sube la imagen que acabas de crear.
@@ -85,7 +94,18 @@ Conéctate a Docker Hub y sube la imagen que acabas de crear.
 
 `docker pull <tu_usuario_docker_hub>/comandos_redes`
 
+![](/Images/img78.png)
+
 
 Descarga la imagen en otro ordenador donde tengas docker instalado, y crea un contenedor a partir de ella. (Si no tienes otro ordenador con docker instalado, borra la imagen en tu ordenador y bájala de Docker Hub).
 
-`docker run -d -p 8080:80 <tu_usuario_docker_hub>/mi_servidor_web`
+`docker run -d -p 8080:80 <tu_usuario_docker_hub>/comandos_redes`
+
+![](/Images/img78.png)
+
+`https://localhost:8080`
+
+![](/Images/img78.png)
+
+
+> Ángel Pérez Blanco
